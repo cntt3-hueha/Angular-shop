@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-3">
+        <app-product-filter [category]="category"></app-product-filter>
+    </div>
+    <div class="col-9">
+        <div class="row" *ngIf="cart$ | async as cart">
+            <ng-container *ngFor="let p of filteredProducts; let i = index">
+                <div class="col-6">
+                    <product-card [product]="p" [shopping-cart]="cart"></product-card>
+                </div>
+            <div *ngIf="(i+1) % 2=== 0" class="w-100"></div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Shop address : 459 Ton Duc Thang, Lien Chieu, Da Nang</p>
+    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+    <p> Feel free to contact us via : <a href="huehathi710@gamil.com">
+    huehathi710@gmailcom AND 0986997837</a>.</p>
+</footer>
+
+

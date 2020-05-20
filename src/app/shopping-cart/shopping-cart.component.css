@@ -1,0 +1,11 @@
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-size: cover;
+}
+.center-parent {
+    text-align: center;
+    color: cornflowerblue;
+
+}
